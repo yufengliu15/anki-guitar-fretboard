@@ -34,8 +34,10 @@ for string in range(6):
         fretboard.export(dir+str(string+1)+"-"+str((starting_note-2)%12)+notes[fret]+".svg", format="svg")
         starting_note = (starting_note + 1) % 12
     
-    # fourth intervals!
+    # fourth/fifth intervals!
     if (string == 1):
         starting_note = (starting_note + 4) % 12
     else:
         starting_note = (starting_note + 5) % 12
+        
+print("SVG's generated in ./svgs")
