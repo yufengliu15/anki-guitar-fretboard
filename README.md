@@ -1,4 +1,5 @@
 # anki-guitar-fretboard
+Python script to create Anki flashcards to memorize the guitar's fretboard. SVGs were created using [fretboardgtr]{https://github.com/antscloud/fretboardgtr}. Audio files were created by me, using Yamaha's software. 
 
 # Virtual Environment
 ## Create Environment

@@ -6,9 +6,8 @@ config = {
         "first_fret": 0,
         "last_fret": 22,
         "show_tuning": False,
-        "show_frets": True,
+        "show_frets": False,
         "show_note_name": False,
-        #"open_color_scale": True,
         "fretted_color_scale": True,
         "fretted_colors": {
             "root": "rgb(255,255,255)",
@@ -20,7 +19,6 @@ config = {
     },
     "background": {"color": "rgb(0,0,50)", "opacity": 0.4},
     "frets": {"color": "rgb(150,150,150)"},
-    "fret_numbers": {"color": "rgb(150,150,150)", "fontsize": 20, "fontweight": "bold"},
     "strings": {"color": "rgb(200,200,200)", "width": 2},
 }
 
