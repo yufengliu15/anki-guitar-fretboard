@@ -1,4 +1,0 @@
-#separator:tab
-#html:true
-#tags column:4
-"F#"	[sound:blah]	&lt;img src= &gt;	

@@ -1,4 +1,4 @@
-import os
+import os, csv
 
 audioFiles = []
 images = []
@@ -15,5 +15,13 @@ note_names = ['E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B', 'C', 'C#', 'D', 'D#', '
 
 images.sort()
 audioFiles.sort()
-notes = ["A", "A#", "B", "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#"]
-startingNote = 7
+audioFiles.remove(".DS_Store")
+
+content = ["#separator:tab \n #html:true \n#tags column:4 \n 'F#'  [sound:blah] &lt;img src= &gt;"]
+
+with open('notes.csv', 'w', newline='') as file:
+    writer = csv.writer(file)
+    field = ["ID", "Back", "Audio", "Image"]
+    writer.writerow(field)
+    for i in range(len(images)):
+        writer.writerow([i, note_names[i], f'[sound:{audioFiles[i]}]', f"<img src=\"{images[i]}\">"])
