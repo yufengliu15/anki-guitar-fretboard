@@ -31,7 +31,11 @@ for string in range(6):
     for fret in range(12):
         fretboard = FretBoard(config=fretboard_config)
         fretboard.add_note(string, notes[fret])
-        fretboard.export(dir+str(string+1)+"-"+str((starting_note-2)%12)+notes[fret]+".svg", format="svg")
+        if ((starting_note-2)%12 < 10):
+            fretCount = "0" + str((starting_note-2)%12)
+        else:
+            fretCount = (starting_note-2)%12
+        fretboard.export(dir+str(string+1)+"-"+str(fretCount)+notes[fret]+".svg", format="svg")
         starting_note = (starting_note + 1) % 12
     
     # fourth/fifth intervals!
